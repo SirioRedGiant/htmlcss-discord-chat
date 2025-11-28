@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discord Chat</title>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+
+        <!-- Sidebar lista UL -->
+         <!-- TODO: cambiare tutte le icone con le immagini -->
+        <nav class="sidebar">
+            <ul class="server-list">
+                <li class="server-icon active">
+                    <div class="active-indicator"></div>
+                    <i class="fas fa-home"></i> 
+                </li>
+                <li class="server-icon">
+                    <img src="placeholder-brain.png" alt="Server 1">
+                </li>
+                <li class="server-icon">
+                    <i class="placeholder-boolean-logo"></i>
+                </li>
+                 <li class="server-icon">
+                    <img src="placeholder-italia.png" alt="Server 3">
+                </li>
+                 <li class="server-icon">
+                    <img src="placeholder-nintendo.png" alt="Server 4">
+                </li>
+                 <li class="server-icon">
+                    <div class="placeholder-javacript-png">JS</div>
+                </li>
+                 <li class="server-icon">
+                    <img src="placeholder-pokemon.png" alt="Server 6">
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Header Section - Ora è una lista UL -->
+            <header class="header">
+                <div class="header-title">Messaggi</div>
+                <ul class="header-icons-list">
+                    <li><i class="search- icon"></i></li>
+                    <li class="add-friends">
+                        <i class="user-plus"></i> Aggiungi amici
+                    </li>
+                </ul>
+            </header>
+
+            <!-- Chat List Section in lista UL -->
+            <section class="chat-list">
+                <ul class="chat-items-list">
+                    <!-- Chat Item Template - Li -->
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Giuseppe Rossi</div>
+                            <div class="last-message">ciao! tutto bene?</div>
+                        </div>
+                        <div class="times-ago">2min</div>
+                        <span class="status-dot non-disturbare"></span>
+                    </li>
+                    
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Francesco Bianchi</div>
+                            <div class="last-message-self">Tu: perfetto, grazie!</div>
+                        </div>
+                        <div class="times-ago">5min</div>
+                        <span class="status-dot impegnato"></span>
+                    </li>
+                    
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Giulio Moretti</div>
+                            <div class="last-message-self">Tu: ottimo lavoro!</div>
+                        </div>
+                        <div class="timestamp">8min</div>
+                        <span class="status-dot impegnato"></span>
+                    </li>
+
+                     <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Lucia Ferrari</div>
+                            <div class="last-message">grazie mille per tutto</div>
+                        </div>
+                        <div class="times-ago">12min</div>
+                        <span class="status-dot online"></span>
+                    </li>
+
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Stefano Romano</div>
+                            <div class="last-message-self">Tu: ci sentiamo dopo</div>
+                        </div>
+                        <div class="times-ago">18min</div>
+                        <span class="status-dot non-disturbare"></span>
+                    </li>
+
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Alessandra Conti</div>
+                            <div class="last-message">quando hai tempo chiamami</div>
+                        </div>
+                        <div class="times-ago">25min</div>
+                        <span class="status-dot impegnato"></span>
+                    </li>
+
+                    <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Elena Martini</div>
+                            <div class="last-message-self">Tu: hai visto il messaggio?</div>
+                        </div>
+                        <div class="times-ago">45min</div>
+                        <span class="status-dot online"></span>
+                    </li>
+
+                     <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Matteo Greco</div>
+                            <div class="last-message">ho finito il progetto</div>
+                        </div>
+                        <div class="times-ago">12min</div>
+                        <span class="status-dot non-disturbare"></span>
+                    </li>
+
+                     <li class="chat-item">
+                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
+                        <div class="chat-info">
+                            <div class="user-name">Marta Cortina</div>
+                            <div class="last-message-self">Tu: lato nostro non ci sono problemi</div>
+                        </div>
+                        <div class="times-ago">1h</div>
+                        <span class="status-dot non-disturbare"></span>
+                    </li>
+                </ul>
+            </section>
+
+             <!-- Bonus: New Chat Button (Fixed Position) -->
+             <button class="new-chat-btn" title="Nuova Chat">
+                <i class="button-chat"></i>
+             </button>
+
+        </main>
+    </div>
+    
+    <!-- Footer/Navigation Bar - Ora è una lista UL -->
+    <footer class="footer">
+        <ul class="footer-nav-list">
+            <li class="home-item">Pagina principale</li>
+            <li class="notification-item">Notifiche</li>
+            <li class="profile-item">Tu</li>
+        </ul>
+    </footer>
+
+</body>
+</html>
