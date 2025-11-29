@@ -14,162 +14,212 @@
   </head>
   <body>
     <div class="app-container">
+      <!-- Sidebar lista UL -->
 
-        <!-- Sidebar lista UL -->
-         <!-- TODO: cambiare tutte le icone con le immagini -->
-        <nav class="sidebar">
-            <ul class="server-list">
-                <li class="server-icon active">
-                    <div class="active-indicator"></div>
-                    <i class="fas fa-home"></i> 
-                </li>
-                <li class="server-icon">
-                    <img src="placeholder-brain.png" alt="Server 1">
-                </li>
-                <li class="server-icon">
-                    <i class="placeholder-boolean-logo"></i>
-                </li>
-                 <li class="server-icon">
-                    <img src="placeholder-italia.png" alt="Server 3">
-                </li>
-                 <li class="server-icon">
-                    <img src="placeholder-nintendo.png" alt="Server 4">
-                </li>
-                 <li class="server-icon">
-                    <div class="placeholder-javacript-png">JS</div>
-                </li>
-                 <li class="server-icon">
-                    <img src="placeholder-pokemon.png" alt="Server 6">
-                </li>
-            </ul>
-        </nav>
+      <nav class="sidebar">
+        <ul class="server-list">
+          <li class="server-icon active">
+            <div class="active-indicator"></div>
+            <img src="./assets/img/logo.webp" alt="Server attuale" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_arte.png" alt="Server 1" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_boolean.png" alt="Server 2" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_italia.png" alt="Server 3" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_nintendo.png" alt="Server 4" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_javascript.png" alt="Server 5" />
+          </li>
+          <li class="server-icon">
+            <img src="./assets/img/server_pokemon.png" alt="Server 6" />
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Main Content Area -->
-        <main class="main-content">
-            
-            <!-- Header Section - Ora è una lista UL -->
-            <header class="header">
-                <div class="header-title">Messaggi</div>
-                <ul class="header-icons-list">
-                    <li><i class="search- icon"></i></li>
-                    <li class="add-friends">
-                        <i class="user-plus"></i> Aggiungi amici
-                    </li>
-                </ul>
-            </header>
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Header Section - Ora è una lista UL -->
+        <header class="header">
+          <div class="header-title">Messaggi</div>
+          <ul class="header-icons-list">
+            <li>
+              <i class="bi bi-search"></i>
+            </li>
+            <li class="add-friends">
+              Aggiungi amici
+              <i class="bi bi-person-fill-add"></i>
+            </li>
+          </ul>
+        </header>
 
-            <!-- Chat List Section in lista UL -->
-            <section class="chat-list">
-                <ul class="chat-items-list">
-                    <!-- Chat Item Template - Li -->
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Giuseppe Rossi</div>
-                            <div class="last-message">ciao! tutto bene?</div>
-                        </div>
-                        <div class="times-ago">2min</div>
-                        <span class="status-dot non-disturbare"></span>
-                    </li>
-                    
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Francesco Bianchi</div>
-                            <div class="last-message-self">Tu: perfetto, grazie!</div>
-                        </div>
-                        <div class="times-ago">5min</div>
-                        <span class="status-dot impegnato"></span>
-                    </li>
-                    
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Giulio Moretti</div>
-                            <div class="last-message-self">Tu: ottimo lavoro!</div>
-                        </div>
-                        <div class="timestamp">8min</div>
-                        <span class="status-dot impegnato"></span>
-                    </li>
+        <!-- Chat List Section in lista UL -->
+        <section class="chat-list">
+          <ul class="chat-items-list">
+            <!-- Chat Item Template - Li -->
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile1.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Giuseppe Rossi</div>
+                <div class="last-message">ciao! tutto bene?</div>
+              </div>
+              <div class="times-ago">2min</div>
+              <span class="status-dot non-disturbare"></span>
+            </li>
 
-                     <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Lucia Ferrari</div>
-                            <div class="last-message">grazie mille per tutto</div>
-                        </div>
-                        <div class="times-ago">12min</div>
-                        <span class="status-dot online"></span>
-                    </li>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile2.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Francesco Bianchi</div>
+                <div class="last-message-self">Tu: perfetto, grazie!</div>
+              </div>
+              <div class="times-ago">5min</div>
+              <span class="status-dot impegnato"></span>
+            </li>
 
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Stefano Romano</div>
-                            <div class="last-message-self">Tu: ci sentiamo dopo</div>
-                        </div>
-                        <div class="times-ago">18min</div>
-                        <span class="status-dot non-disturbare"></span>
-                    </li>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile12.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Giulio Moretti</div>
+                <div class="last-message-self">Tu: ottimo lavoro!</div>
+              </div>
+              <div class="times-ago">8min</div>
+              <span class="status-dot impegnato"></span>
+            </li>
 
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Alessandra Conti</div>
-                            <div class="last-message">quando hai tempo chiamami</div>
-                        </div>
-                        <div class="times-ago">25min</div>
-                        <span class="status-dot impegnato"></span>
-                    </li>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile3.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Lucia Ferrari</div>
+                <div class="last-message">grazie mille per tutto</div>
+              </div>
+              <div class="times-ago">12min</div>
+              <span class="status-dot online"></span>
+            </li>
 
-                    <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Elena Martini</div>
-                            <div class="last-message-self">Tu: hai visto il messaggio?</div>
-                        </div>
-                        <div class="times-ago">45min</div>
-                        <span class="status-dot online"></span>
-                    </li>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile4.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Stefano Romano</div>
+                <div class="last-message-self">Tu: ci sentiamo dopo</div>
+              </div>
+              <div class="times-ago">18min</div>
+              <span class="status-dot non-disturbare"></span>
+            </li>
 
-                     <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Matteo Greco</div>
-                            <div class="last-message">ho finito il progetto</div>
-                        </div>
-                        <div class="times-ago">12min</div>
-                        <span class="status-dot non-disturbare"></span>
-                    </li>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile5.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Alessandra Conti</div>
+                <div class="last-message">quando hai tempo chiamami</div>
+              </div>
+              <div class="times-ago">25min</div>
+              <span class="status-dot impegnato"></span>
+            </li>
 
-                     <li class="chat-item">
-                        <img src="placeholder-profile.png" alt="User Avatar" class="user-avatar">
-                        <div class="chat-info">
-                            <div class="user-name">Marta Cortina</div>
-                            <div class="last-message-self">Tu: lato nostro non ci sono problemi</div>
-                        </div>
-                        <div class="times-ago">1h</div>
-                        <span class="status-dot non-disturbare"></span>
-                    </li>
-                </ul>
-            </section>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile6.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Elena Martini</div>
+                <div class="last-message-self">Tu: hai visto il messaggio?</div>
+              </div>
+              <div class="times-ago">45min</div>
+              <span class="status-dot online"></span>
+            </li>
 
-             <!-- Bonus: New Chat Button (Fixed Position) -->
-             <button class="new-chat-btn" title="Nuova Chat">
-                <i class="button-chat"></i>
-             </button>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile7.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Matteo Greco</div>
+                <div class="last-message">ho finito il progetto</div>
+              </div>
+              <div class="times-ago">12min</div>
+              <span class="status-dot non-disturbare"></span>
+            </li>
 
-        </main>
+            <li class="chat-item">
+              <img
+                src="./assets/img/profile8.webp"
+                alt="User Avatar"
+                class="user-avatar"
+              />
+              <div class="chat-info">
+                <div class="user-name">Marta Cortina</div>
+                <div class="last-message-self">
+                  Tu: lato nostro non ci sono problemi
+                </div>
+              </div>
+              <div class="times-ago">1h</div>
+              <span class="status-dot non-disturbare"></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Bonus: New Chat Button (Fixed Position) -->
+        <button class="new-chat-btn" title="Nuova Chat">
+          <i class="bi bi-chat-dots-fill"></i>
+        </button>
+      </main>
     </div>
-    
+
     <!-- Footer/Navigation Bar - Ora è una lista UL -->
     <footer class="footer">
-        <ul class="footer-nav-list">
-            <li class="home-item">Pagina principale</li>
-            <li class="notification-item">Notifiche</li>
-            <li class="profile-item">Tu</li>
-        </ul>
+      <ul class="footer-nav-list">
+        <li>
+          <i class="bi bi-houses-fill"></i>
+          <span>Pagina principale</span>
+        </li>
+        <li>
+          <i class="bi bi-bell-fill"></i>
+          <span>Notifiche</span>
+        </li>
+        <li class="profile-item-container">
+          <img
+            src="./assets/img/WhatsApp Image 2025-11-29 at 12.37.21.jpeg"
+            alt="My Photo"
+            class="my-avatar"
+          />
+          <span>Tu</span>
+        </li>
+      </ul>
     </footer>
-
-</body>
+  </body>
 </html>
