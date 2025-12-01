@@ -1,0 +1,299 @@
+/* Variables for colors */
+:root {
+  --bg-primary: #1e1f22;
+  --bg-secondary: #2b2d31;
+  --bg-tertiary: #313338;
+  --text-primary: #ffffff;
+  --text-secondary: #b5bac1;
+  --accent-color: #5865f2;
+  --hover-bg: #40444b;
+  --status-online: #3ba55c;
+  --status-idle: #faa61a;
+  --status-dnd: #ed4245;
+}
+
+/* Base Reset & Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Il body è il container principale in colonna */
+}
+
+ul {
+  list-style: none;
+}
+
+/* App Container (Main layout using Flexbox for mobile view) */
+.app-container {
+  display: flex;
+  flex: 1; /* Permette al container principale di crescere e occupare tutto lo spazio rimanente */
+  overflow: hidden; /* Impedisce che il contenuto principale allunghi il body */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 70px; /* Larghezza fissa per la sidebar */
+  background-color: var(--bg-secondary);
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.server-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.server-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Icone circolari */
+  cursor: pointer;
+  transition: border-radius 0.3s ease, transform 0.3s ease; /* Bonus effects */
+}
+
+/* Bonus: Active state and hover effects */
+.server-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-indicator {
+  position: absolute;
+  left: -15px;
+  height: 40px;
+  width: 8px;
+  background-color: var(--text-primary);
+  border-radius: 0 4px 4px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.server-icon.active .active-indicator {
+  opacity: 1;
+}
+
+.server-icon:hover img {
+  border-radius: 15px;
+  transform: scale(1.05);
+}
+
+.server-icon:hover .active-indicator {
+  opacity: 1;
+}
+
+
+/* Main Content Area Styling */
+.main-content {
+  flex: 1; /* Occupa il resto dello spazio orizzontale */
+  display: flex;
+  flex-direction: column; /* Organizza header, chat-list e bottone in colonna */
+  background-color: var(--bg-tertiary);
+  position: relative; /* Necessario per il posizionamento assoluto/fisso del bottone */
+  overflow: hidden;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  height: 60px; /* Altezza fissa per l'header */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.header-icons-list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-icons-list li {
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.header-icons-list li:hover {
+  color: var(--text-primary);
+}
+
+.add-friends {
+  
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--hover-bg);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+
+/* Chat List Styling */
+.chat-list {
+  flex: 1; /* Permette alla lista di occupare lo spazio rimanente tra header e footer/bottone */
+  overflow-y: auto; /* Bonus: Solo questa sezione scorre */
+  padding: 10px 0;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Bonus: Highlight chat item on hover */
+.chat-item:hover {
+  background-color: var(--hover-bg);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+}
+
+/* Bonus: User status dots */
+.status-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-tertiary);
+  bottom: 0px;
+  left: 45px;
+}
+
+/* Status colors */
+.online { background-color: var(--status-online); }
+.impegnato { background-color: var(--status-idle); }
+.non-disturbare { background-color: var(--status-dnd); }
+
+.chat-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.last-message, .last-message-self {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.last-message-self {
+  color: var(--text-primary);
+}
+
+.times-ago {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* Bonus: Fixed New Chat Button */
+.new-chat-btn {
+  position: fixed; /* Posizione fissa rispetto al viewport */
+  bottom: 80px; /* Sopra il footer */
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 20;
+  transition: background-color 0.3s ease;
+}
+
+.new-chat-btn:hover {
+  background-color: #4752c4;
+}
+
+
+/* Footer/Bottom Navigation */
+.footer {
+  height: 60px; /* Altezza fissa per il footer */
+  background-color: var(--bg-secondary);
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Impedisce al footer di restringersi se il contenuto principale è troppo grande */
+}
+
+.footer-nav-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.footer-nav-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  gap: 3px;
+}
+
+.footer-nav-list li:hover {
+  color: var(--text-primary);
+}
+
+.footer-nav-list li i {
+  font-size: 1.2rem;
+}
+
+.my-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--text-secondary);
+}
+
+.profile-item-container:hover .my-avatar {
+    border-color: var(--text-primary);
+}
